@@ -5,29 +5,22 @@ sidebar_position: 1
 
 ## 概述
 
-DeepSeek-R1 是由 deepseek-ai 开发的一系列高级语言模型，旨在通过输出思维链内容（`reasoning_content`）来提升最终回答的准确性。目前，该接口与 deepseek 接口兼容。使用该模型时，建议先升级 OpenAI SDK 以支持新参数。
+DeepSeek-R1 是 deepseek-ai 推出的一系列高性能语言模型，专注于通过生成思维链内容（reasoning_content）来优化答案的准确性和逻辑性。该模型接口兼容 deepseek 生态，为无缝集成提供支持。为确保最佳使用体验，建议在部署前升级 OpenAI SDK，以适配新增参数和功能。
 
 ### 支持模型列表
 
-- `deepseek-ai/DeepSeek-R1`
-- `Pro/deepseek-ai/DeepSeek-R1`
-- `deepseek-ai/DeepSeek-R1-Distill-Llama-70B`
-- `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B`
-- `deepseek-ai/DeepSeek-R1-Distill-Qwen-14B`
-- `deepseek-ai/DeepSeek-R1-Distill-Llama-8B`
-- `deepseek-ai/DeepSeek-R1-Distill-Qwen-7B`
-- `deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B`
-- `Pro/deepseek-ai/DeepSeek-R1-Distill-Llama-8B`
-- `Pro/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B`
-- `Pro/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B`
+- `deepseek-v3`
+- `deepseek-r1`
+- `deepseek-r1-distill-qwen`
 
 ## 安装与升级
 
-在使用 DeepSeek-R1 之前，请确保已安装最新版本的 OpenAI SDK。可以通过以下命令进行升级：
+在部署使用 DeepSeek-R1 之前，请确保已安装最新版本的 OpenAI SDK。可以通过以下命令进行升级：
 
 ```bash
 pip3 install -U openai
 ```
+
 ## API 参数
 
 - **输入参数**：
@@ -41,9 +34,88 @@ pip3 install -U openai
 
 在每一轮对话过程中，模型会输出思维链内容（`reasoning_content`）和最终回答（`content`）。在下一轮对话中，之前轮次输出的思维链内容不会被拼接到上下文中。
 
-## OpenAI 请求示例
+## Python 请求示例
 
 ### 流式输出请求
 
 ```python
+from openai import OpenAI
+
+API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service"
+API_KEY = "{YOUR_API_KEY}"
+
+client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
+
+# 控制是否使用流式输出
+isStream = True
+
+response = client.chat.completions.create(
+    model="deepseek-r1-distill-qwen",
+    messages=[
+        {"role": "user", "content": "你是谁"}
+    ],
+    stream=isStream
+)
+
+if isStream:
+    # 流式输出处理
+    for chunk in response:
+        # 打印完整的 chunk，方便调试
+        # print(chunk)
+
+        # 检查 chunk.choices 是否有内容
+        if hasattr(chunk, 'choices') and len(chunk.choices) > 0:
+            # 访问 choices[0].delta.content
+            delta = chunk.choices[0].delta
+            if hasattr(delta, 'content') and delta.content is not None:
+                # 打印内容到终端
+                print(delta.content, end='', flush=True)
+    print()  # 输出完成后换行
+else:
+    # 非流式输出处理
+    print(response.choices[0].message.content)
 ```
+
+### 非流式输出请求
+
+```python
+from openai import OpenAI
+
+API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service"
+API_KEY = "{YOUR_API_KEY}"
+
+client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
+
+# 控制是否使用流式输出
+isStream = false
+
+response = client.chat.completions.create(
+    model="deepseek-r1-distill-qwen",
+    messages=[
+        {"role": "user", "content": "你是谁"}
+    ],
+    stream=isStream
+)
+
+if isStream:
+    # 流式输出处理
+    for chunk in response:
+        # 打印完整的 chunk，方便调试
+        # print(chunk)
+
+        # 检查 chunk.choices 是否有内容
+        if hasattr(chunk, 'choices') and len(chunk.choices) > 0:
+            # 访问 choices[0].delta.content
+            delta = chunk.choices[0].delta
+            if hasattr(delta, 'content') and delta.content is not None:
+                # 打印内容到终端
+                print(delta.content, end='', flush=True)
+    print()  # 输出完成后换行
+else:
+    # 非流式输出处理
+    print(response.choices[0].message.content)
+```
+
+### 注意事项
+- API 密钥：请确保使用正确的 API 密钥进行身份验证。
+- 流式输出：流式输出适用于需要逐步接收响应的场景，而非流式输出则适用于一次性获取完整响应的场景。
