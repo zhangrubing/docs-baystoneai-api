@@ -9,9 +9,21 @@ sidebar_position: 1
 英智大模型推理API, 提供了与OpenAI API兼容的方式。 主要包含: 请求的服务地址, 请求的路径和2种请求方式, 流式处理和非流式处理。
 
 
-## API 服务地址
+## API BASE URL地址
 
 https://apiemp.baystoneai.com/cognihub/service/v1
+
+所有 API 端点都基于此 URL 进行调用，例如：
+
+| 端点 | 说明 | 完整 URL |
+|------|------|---------|
+| `chat/completions` | 生成对话 | `https://api.openai.com/v1/chat/completions` |
+| `completions` | 传统文本补全 | `https://api.openai.com/v1/completions` |
+| `edits` | 文本编辑 | `https://api.openai.com/v1/edits` |
+| `images/generations` | 生成图片 | `https://api.openai.com/v1/images/generations` |
+| `models` | 获取可用模型列表 | `https://api.openai.com/v1/models` |
+
+---
 
 
 ## API-Key
@@ -24,7 +36,7 @@ https://apiemp.baystoneai.com/cognihub/service/v1
 在请求头 `Authorization` 中添加：
 ```http
 Authorization: Bearer YOUR_API_KEY
-
+```
 
 ## 可用模型 
 
