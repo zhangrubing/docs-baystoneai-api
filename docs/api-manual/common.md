@@ -4,10 +4,14 @@ sidebar_position: 1
 
 # 通用
 
+##  概述
+
+英智大模型推理API, 提供了与OpenAI API兼容的方式。 主要包含: 请求的服务地址, 请求的路径和2种请求方式, 流式处理和非流式处理。
+
 
 ## API 服务地址
 
-https://apiemp.baystoneai.com/cognihub/service
+https://apiemp.baystoneai.com/cognihub/service/v1
 
 
 ## API-Key
@@ -15,6 +19,12 @@ https://apiemp.baystoneai.com/cognihub/service
 登录官网在"我的控制台"获取
 
 ![api-key](./img/api-key.png)
+
+所有 API 请求都需要使用 API Key 进行身份验证。  
+在请求头 `Authorization` 中添加：
+```http
+Authorization: Bearer YOUR_API_KEY
+
 
 ## 可用模型 
 
@@ -34,8 +44,46 @@ https://apiemp.baystoneai.com/cognihub/service
 ### 实现方式
 在 API 请求中，使用 stream=true 参数即可启用流式处理 例如：
 
+```python
+import openai
 
+API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service"
+API_KEY = "{YOUR_API_KEY}"
 
+client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
 
-## 非流失处理
+response = client.chat.completions.create(
+    model="llama-3.1-instruct",
+    messages=[{"role": "user", "content": "Explain quantum mechanics"}],
+    stream=True  # 启用流式处理
+)
 
+for chunk in response:
+    print(chunk["choices"][0]["delta"].get("content", ""), end="")  # 持续输出数据
+
+```
+
+## 非流式处理（Non-Streaming）
+
+非流式处理是一次性返回完整数据的方式，适用于对响应时间要求不高的场景。
+
+### 特点
+- 完整返回响应：模型会在生成完完整回答后才返回数据。
+- 简单易用：适用于需要一次性获取完整结果的场景，例如批量处理任务、文档生成等。
+- 可能有较高的延迟：对于长文本输出，等待时间较长，用户体验相对较慢。
+
+```python
+import openai
+
+API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service"
+API_KEY = "{YOUR_API_KEY}"
+
+client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
+
+response = client.chat.completions.create(
+    model="llama-3.1-instruct",
+    messages=[{"role": "user", "content": "Explain quantum mechanics"}],
+    stream=False  # 启用流式处理
+)
+print(response["choices"][0]["message"]["content"])  # 一次性输出完整结果
+```
