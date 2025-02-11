@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/zhangrubing/docs-baystoneai-api/tree/main/',
         },
         blog: false,
         theme: {
@@ -66,8 +66,6 @@ const config: Config = {
           position: 'left',
           label: '用户手册',
         },
-        { to: '/api-manual', label: 'API手册', position: 'left' },
-        { to: '/user-cases', label: '场景示例', position: 'left' },
       ],
     },
     footer: {
