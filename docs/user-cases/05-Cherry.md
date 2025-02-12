@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # 在 Cherry Studio 中使用
 
 
