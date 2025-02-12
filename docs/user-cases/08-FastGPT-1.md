@@ -2,4 +2,4 @@
 sidebar_position: 8
 ---
 
-# 在 FastGPT 中使用 
+# 在FastGPT中使用 
