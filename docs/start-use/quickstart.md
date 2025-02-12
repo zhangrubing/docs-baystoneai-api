@@ -4,18 +4,18 @@ sidebar_position: 2
 
 # 快速上手
 
-## 1. 登录平台
+### 1. 登录平台
 
 访问 英智大模型推理API 官网: https://api.baystoneai.com/  并点击右上角“登录”按钮，按照提示填写您的基本信息进行登录。
 
 
-## 2. 查看支持的模型列表
+### 2. 查看支持的模型列表
 
 在官网的首页正中间的大模型列表,即可查看当前平台支持的模型。
 ![models](./img/models.png)
 
 
-## 3. 获取API Key
+### 3. 获取API Key
 
 如果您是首次使用, 需要创建API-KEY, 点击右上角“个人头像”，打开"我的控制台"。在控制台的"API秘钥"中，点击“新建API秘钥”按钮，按照提示填写信息，即可创建API Key。
 
@@ -23,9 +23,9 @@ sidebar_position: 2
 
 ![api-key](./img/api-key.png)
 
-## 4 英智大模型推理API调用方法
+### 4. 英智大模型推理API调用方法
 
-### 4.1 使用curl命令调用
+#### 4.1 使用curl命令调用
 
 您可以直接在命令行中使用curl命令调用API，其中 YOUR_API_KEY 参数替换成自己的API-KEY, 以下是一个使用模型deepseek-r1-distill-qwen的示例： 
 
@@ -45,7 +45,7 @@ curl -X POST $API_BASE_URL/v1/chat/completions -H"Content-Type: application/json
 }'
 ```
 
-### 4.2 使用Python调用
+#### 4.2 使用Python调用
 您也可以使用Python语音来调用API,以下是一个使用模型deepseek-r1-distill-qwen的示例：
 ```python
 from openai import OpenAI
@@ -85,7 +85,7 @@ else:
     print(response.choices[0].message.content)
 ```
 
-### 4.3 使用NodeJs调用
+#### 4.3 使用NodeJs调用
 同样在NodeJs中也是可以使用的, 以下是一个使用模型deepseek-r1-distill-qwen的示例：
 ```javascript
 const API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service";

@@ -3,17 +3,17 @@ sidebar_position: 1
 ---
 # 推理模型
 
-## 概述
+### 1. 概述
 
 DeepSeek-R1 是 deepseek-ai 推出的一系列高性能语言模型，专注于通过生成思维链内容（reasoning_content）来优化答案的准确性和逻辑性。该模型接口兼容 deepseek 生态，为无缝集成提供支持。为确保最佳使用体验，建议在部署前升级 OpenAI SDK，以适配新增参数和功能。
 
-### 支持模型列表
+#### 支持模型列表
 
 - `deepseek-v3`
 - `deepseek-r1`
 - `deepseek-r1-distill-qwen`
 
-## 安装与升级
+### 2. 安装与升级
 
 在部署使用 DeepSeek-R1 之前，请确保已安装最新版本的 OpenAI SDK。可以通过以下命令进行升级：
 
@@ -21,7 +21,7 @@ DeepSeek-R1 是 deepseek-ai 推出的一系列高性能语言模型，专注于�
 pip3 install -U openai
 ```
 
-## API 参数
+### 3. API 参数
 
 - **输入参数**：
   - `max_tokens`：回答的最大长度（包含思维链输出）。其中，`deepseek-ai/DeepSeek-R1` 和 `Pro/deepseek-ai/DeepSeek-R1` 的 `max_tokens` 最大为 8K，其他模型最大为 16K。
@@ -30,13 +30,13 @@ pip3 install -U openai
   - `reasoning_content`：思维链内容，与 `content` 同级。
   - `content`：最终回答内容。
 
-## 上下文拼接
+### 4. 上下文拼接
 
 在每一轮对话过程中，模型会输出思维链内容（`reasoning_content`）和最终回答（`content`）。在下一轮对话中，之前轮次输出的思维链内容不会被拼接到上下文中。
 
-## Python 请求示例
+### 5. Python 请求示例
 
-### 流式输出请求
+#### 流式输出请求
 
 ```python
 from openai import OpenAI
@@ -76,7 +76,7 @@ else:
     print(response.choices[0].message.content)
 ```
 
-### 非流式输出请求
+#### 非流式输出请求
 
 ```python
 from openai import OpenAI
@@ -116,6 +116,6 @@ else:
     print(response.choices[0].message.content)
 ```
 
-### 注意事项
+### 6. 注意事项
 - API 密钥：请确保使用正确的 API 密钥进行身份验证。
 - 流式输出：流式输出适用于需要逐步接收响应的场景，而非流式输出则适用于一次性获取完整响应的场景。

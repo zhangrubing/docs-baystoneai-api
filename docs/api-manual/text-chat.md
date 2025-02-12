@@ -4,21 +4,21 @@ sidebar_position: 1
 
 # 文本模型
 
-## 1. 概述
+### 1. 概述
 API 提供了两种请求方式：
 - **流式处理（Streaming）**：逐步返回数据，提高交互体验。
 - **非流式处理（Non-Streaming）**：等待完整响应后一次性返回数据。
 
-## 2. 认证
+### 2. 认证
 所有 API 请求都需要使用 API Key 进行身份验证。  
 在请求头 `Authorization` 中添加：
 ```http
 Authorization: Bearer YOUR_API_KEY
 ```
 
-## 3. 创建对话请求
+### 3. 创建对话请求
 
-### 3.1 请求参数说明
+#### 3.1 请求参数说明
 
 - 请求方法: POST
 - 请求路径: `https://apiemp.baystoneai.com/cognihub/service/v1/chat/completions`
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR_API_KEY
 
 ---
 
-#### `messages` 参数结构
+##### `messages` 参数结构
 
 `messages` 需要包含一个 **对话历史** 数组，格式如下：
 ```json
@@ -56,7 +56,7 @@ Authorization: Bearer YOUR_API_KEY
   {"role": "assistant", "content": "The capital of France is Paris."}
 ]
 ```
-### 3.2 返回参数说明
+#### 3.2 返回参数说明
 
 主参数说明:
 
@@ -140,10 +140,10 @@ usage 统计了本次 API 请求消耗的 Token 数量：
 }
 ```
 
-### 3.3 调用示例
+#### 3.3 调用示例
 
 
-#### 3.3.1 非流式处理（Non-Streaming）
+##### 3.3.1 非流式处理（Non-Streaming）
 
 请求
 
@@ -185,10 +185,7 @@ Authorization: Bearer YOUR_API_KEY
 }
 ```
 
-
-
-
-#### 3.3.2 流式处理（Streaming）
+##### 3.3.2 流式处理（Streaming）
 
 请求
 ```json

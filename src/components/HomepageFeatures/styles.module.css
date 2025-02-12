@@ -9,3 +9,7 @@
   height: 200px;
   width: 200px;
 }
+
+.markdown h1:first-child {
+  --ifm-h1-font-size: 1.4rem;
+}
