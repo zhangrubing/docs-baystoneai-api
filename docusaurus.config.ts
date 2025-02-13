@@ -68,6 +68,10 @@ const config: Config = {
         },
       ],
     },
+    sidebar: {
+      hideable: false, // 禁用侧边栏的折叠功能
+      autoCollapseCategories: false, // 防止自动折叠分类
+    },
     footer: {
       style: 'dark',
       links: [

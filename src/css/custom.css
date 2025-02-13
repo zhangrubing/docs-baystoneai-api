@@ -31,3 +31,8 @@
   --ifm-h1-font-size: 2.4rem;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.2);
 }
+
+/* 确保每个侧边栏项都展开 */
+.docSidebarCategory {
+  display: block;
+}
