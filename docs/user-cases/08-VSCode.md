@@ -20,7 +20,7 @@ MARKETPLACE.VISUALSTUDIO.COM
 
 - 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)  
-- 模型: DeepSeek-R1-Distill-Qwen-14B
+- 模型: deepseek-r1-distill-qwen-14b
 
 ### 4.在VSCode 中 安装 CONTINUE
 
@@ -33,13 +33,13 @@ MARKETPLACE.VISUALSTUDIO.COM
 ![alt text](img/vs-2.png)
 - 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)
-- 模型: DeepSeek-R1-Distill-Qwen-14B
+- 模型: deepseek-r1-distill-qwen-14b
 
 ```json
     {
       "title": "英智deepseek-r1",
       "provider": "openai",
-      "model": "DeepSeek-R1-Distill-Qwen-14B",
+      "model": "deepseek-r1-distill-qwen-14b",
       "apiBase": "https://api.baystoneai.cn/v1",
       "apiKey": "*********8"
     },

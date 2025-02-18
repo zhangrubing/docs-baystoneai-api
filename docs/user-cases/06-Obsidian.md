@@ -40,7 +40,7 @@ Obsidian Copilot 是一个基于 AI 的工具，旨在帮助用户更高效地�
 
 - 服务地址: https://api.baystoneai.cn 
 - API-KEY: (登录后在管理台获取)  
-- 模型: DeepSeek-R1-Distill-Qwen-14B
+- 模型: deepseek-r1-distill-qwen-14b
 
 
 ### 5. 在Obsidian Copilot中配置模型

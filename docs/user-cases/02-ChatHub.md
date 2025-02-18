@@ -20,7 +20,7 @@ ChatHub 是一款多模型聚合 AI 聊天客户端，支持同时连接多个�
 
 - 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)  
-- 模型: DeepSeek-R1-Distill-Qwen-14B
+- 模型: deepseek-r1-distill-qwen-14b
 
 ### 4. 在ChatHub中使用 Deepseek-R1 模型
 

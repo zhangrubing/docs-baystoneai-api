@@ -19,7 +19,7 @@ NextChat 是一个基于人工智能的对话平台，通常用于提供聊天�
 
 - 服务地址: https://api.baystoneai.cn (注意这里没有v1)
 - API-KEY: (登录后在管理台获取)  
-- 模型: DeepSeek-R1-Distill-Qwen-14B
+- 模型: deepseek-r1-distill-qwen-14b
 
 ### 4. 配置NextChat
 

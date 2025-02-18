@@ -32,7 +32,7 @@ Chatbox 支持所有的主流操作系统，包括 Windows、MacOS 和 Linux，�
 
 - 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)  
-- 模型: DeepSeek-R1-Distill-Qwen-14B
+- 模型: deepseek-r1-distill-qwen-14b
 
 
 #### 3.2 在 Chatbox 中配置
@@ -52,7 +52,7 @@ Chatbox 支持所有的主流操作系统，包括 Windows、MacOS 和 Linux，�
 - 名称: 英智AI
 - 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)
-- 模型: DeepSeek-R1-Distill-Qwen-14B
+- 模型: deepseek-r1-distill-qwen-14b
 
 ![Chatbox](./img/set-3.png)
 

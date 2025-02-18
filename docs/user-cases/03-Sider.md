@@ -22,7 +22,7 @@ Sider 是一个AI聊天和协作平台，旨在帮助团队通过集成的 AI �
 
 - 服务地址: https://api.baystoneai.cn/ (注意这里没有v1)
 - API-KEY: (登录后在管理台获取)  
-- 模型: DeepSeek-R1-Distill-Qwen-14B
+- 模型: deepseek-r1-distill-qwen-14b
 
 ### 4. 配置 Sider 
 

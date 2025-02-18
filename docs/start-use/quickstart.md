@@ -18,16 +18,16 @@ sidebar_position: 2
 
 | 类型     | 模型                                | 价格(按tokens收费)                                      |
 |----------|-----------------------------------|------------------------------------------------------|
-| 文本生成 | DeepSeek-R1-671B                 | ￥14/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
-| 文本生成 | DeepSeek-V3-671B                 | ￥7/1000000 Tokens（注册用户：免费100次调用/天，限时3天）  |
-| 文本生成 | DeepSeek-R1-Distill-Llama-70B    | ￥3.5/1000000 Tokens（注册用户：免费100次调用/天，限时3天）|
-| 文本生成 | DeepSeek-R1-Distill-Qwen-32B     | ￥1/1000000 Tokens（注册用户：免费100次调用/天，限时3天）  |
-| 文本生成 | DeepSeek-R1-Distill-Qwen-14B     | ￥0.6/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
-| 文本生成 | DeepSeek-R1-Distill-Llama-8B     | ￥0.3/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
-| 文本生成 | DeepSeek-R1-Distill-Qwen-7B      | ￥0.3/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
-| 文本生成 | DeepSeek-R1-Distill-Qwen-1.5B    | 免费（注册用户：100次调用/天 / 实名用户：免费调用）    |
-| 文本生成 | Qwen2.5-instruct-14B             | ￥0.6/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
-| 文本生成 | Llama-3.1-70B                    | 免费（注册用户：100次调用/天 / 实名用户：免费调用）    |
+| 文本生成 | deepseek-r1-671b                 | ￥14/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | deepseek-v3-671b                 | ￥7/1000000 Tokens（注册用户：免费100次调用/天，限时3天）  |
+| 文本生成 | deepseek-r1-distill-llama-70b    | ￥3.5/1000000 Tokens（注册用户：免费100次调用/天，限时3天）|
+| 文本生成 | deepseek-r1-distill-qwen-32b     | ￥1/1000000 Tokens（注册用户：免费100次调用/天，限时3天）  |
+| 文本生成 | deepseek-r1-distill-qwen-14b     | ￥0.6/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | deepseek-r1-distill-llama-8bb     | ￥0.3/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | deepseek-r1-distill-qwen-7b      | ￥0.3/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | deepseek-r1-distill-qwen-1.5b    | 免费（注册用户：100次调用/天 / 实名用户：免费调用）    |
+| 文本生成 | qwen2.5-instruct-14b             | ￥0.6/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | llama-3.1-70b                    | 免费（注册用户：100次调用/天 / 实名用户：免费调用）    |
 | 独立部署 | 客户指定大模型                    | 联系我们，服务器可选H100、L40S、L20、4090               |
 
 
@@ -50,7 +50,7 @@ export API_BASE_URL="https://api.baystoneai.cn"
 export API_KEY="{YOUR_API_KEY}"
 
 curl -X POST $API_BASE_URL/v1/chat/completions -H"Content-Type: application/json" -H "Authorization: Bearer $API_KEY" -d '{
-    "model": "DeepSeek-R1-Distill-Qwen-14B",
+    "model": "deepseek-r1-distill-qwen-14b",
     "stream": true,
     "messages": [
         {"role": "system", "content": "You are ahelpful assistant."},
@@ -75,7 +75,7 @@ client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
 isStream = True
 
 response = client.chat.completions.create(
-    model="DeepSeek-R1-Distill-Qwen-14B",
+    model="deepseek-r1-distill-qwen-14b",
     messages=[
         {"role": "user", "content": "你是谁"}
     ],
@@ -121,7 +121,7 @@ async function callAPI() {
         'Authorization': `Bearer ${API_KEY}`,
       },
       body: JSON.stringify({
-        model: "DeepSeek-R1-Distill-Qwen-14B",
+        model: "deepseek-r1-distill-qwen-14b",
         messages: [
           { role: "system", content: "You are a helpful assistant." },
           { role: "user", content: "Who won the world series in 2020?" },

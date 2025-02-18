@@ -153,7 +153,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR_API_KEY
 
 {
-  "model": "DeepSeek-R1-Distill-Qwen-14B",
+  "model": "deepseek-r1-distill-qwen-14b",
   "messages": [
     {"role": "system", "content": "You are a helpful assistant."},
     {"role": "user", "content": "Explain quantum mechanics in simple terms."}
@@ -169,7 +169,7 @@ Authorization: Bearer YOUR_API_KEY
   "id": "chatcmpl-123",
   "object": "chat.completion",
   "created": 1677858242,
-  "model": "DeepSeek-R1-Distill-Qwen-14B",
+  "model": "deepseek-r1-distill-qwen-14b",
   "choices": [
     {
       "message": {"role": "assistant", "content": "Quantum mechanics is the study of..."},
@@ -194,7 +194,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR_API_KEY
 
 {
-  "model": "DeepSeek-R1-Distill-Qwen-14B",
+  "model": "deepseek-r1-distill-qwen-14b",
   "messages": [
     {"role": "system", "content": "You are a helpful assistant."},
     {"role": "user", "content": "Explain quantum mechanics in simple terms."}
@@ -210,7 +210,7 @@ Authorization: Bearer YOUR_API_KEY
   "id": "chatcmpl-456",
   "object": "chat.completion.chunk",
   "created": 1677858243,
-  "model": "DeepSeek-R1-Distill-Qwen-14B",
+  "model": "deepseek-r1-distill-qwen-14b",
   "choices": [
     {
       "delta": {"content": "Quantum "},

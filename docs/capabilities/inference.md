@@ -12,8 +12,8 @@ DeepSeek-R1 是 deepseek-ai 推出的一系列高性能语言模型，专注于�
 - DeepSeek-R1-671B                
 - DeepSeek-V3-671B                
 - DeepSeek-R1-Distill-Llama-70B   
-- DeepSeek-R1-Distill-Qwen-32B    
-- DeepSeek-R1-Distill-Qwen-14B    
+- deepseek-r1-distill-qwen-32b    
+- deepseek-r1-distill-qwen-14b    
 - DeepSeek-R1-Distill-Llama-8B    
 - DeepSeek-R1-Distill-Qwen-7B     
 - DeepSeek-R1-Distill-Qwen-1.5B   
@@ -56,7 +56,7 @@ client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
 isStream = True
 
 response = client.chat.completions.create(
-    model="DeepSeek-R1-Distill-Qwen-14B",
+    model="deepseek-r1-distill-qwen-14b",
     messages=[
         {"role": "user", "content": "你是谁"}
     ],
@@ -96,7 +96,7 @@ client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
 isStream = false
 
 response = client.chat.completions.create(
-    model="DeepSeek-R1-Distill-Qwen-14B",
+    model="deepseek-r1-distill-qwen-14b",
     messages=[
         {"role": "user", "content": "你是谁"}
     ],
