@@ -60,13 +60,12 @@ Cherry Studio 提供了诸如完整的 Markdown 渲染、智能体创建、翻�
 
 #### 2.3 设置【英智未来】模型服务访问信息
 
-![image-20250211161946680](https://github.com/user-attachments/assets/c2945aaa-a11e-4a3b-8c00-71630a29efbc)
-
+![alt text](img/cherr-set.png)
 
 ```python
 # 填写说明
   API密钥：2.1中创建的密钥
-  API地址：https://apiemp.baystoneai.com/cognihub/service
+  API地址：https://api.baystoneai.cn
 ```
 
 #### 2.4 添加模型
@@ -74,8 +73,7 @@ Cherry Studio 提供了诸如完整的 Markdown 渲染、智能体创建、翻�
 ![image-20250211162531634](https://github.com/user-attachments/assets/983eebbc-a270-4f1c-8d16-b2313c68ae97)
 
 
-![image-20250211162839823](https://github.com/user-attachments/assets/0c0110ba-1e7b-41d2-ae07-d982286fc4b9)
-
+![alt text](img/cherry-add-model.png)
 
 ```python
 # 填写说明

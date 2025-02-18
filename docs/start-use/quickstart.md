@@ -14,19 +14,21 @@ sidebar_position: 2
 在官网的首页正中间的大模型列表,
 
 
-## 大模型列表
+## 规格 与 价格
 
-| 类型   | 模型                          | 价格(按tokens收费)                |
-|--------|-------------------------------|----------------------------------|
-| 文本生成 | deepseek-r1:32b               | ¥14/1000000 Tokens             |
-| 文本生成 | DeepSeek-R1-671B-4k           | ¥14/1000000 Tokens             |
-| 文本生成 | deepseek-v3                   | ¥14/1000000 Tokens             |
-| 文本生成 | deepseek-r1                   | ¥14/1000000 Tokens             |
-| 文本生成 | deepseek-r1-distill-qwen      | ¥14/1000000 Tokens             |
-| 文本生成 | qwen2.5-instruct              | ¥0.6/1000000 Tokens            |
-| 文本生成 | llama-3.1-instruct            | 免费                           |
-| 独立部署 | 客户指定大模型                 | 联系我们，服务器可选H100、L40S、L20、4090 |
-
+| 类型     | 模型                                | 价格(按tokens收费)                                      |
+|----------|-----------------------------------|------------------------------------------------------|
+| 文本生成 | DeepSeek-R1-671B                 | ￥14/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | DeepSeek-V3-671B                 | ￥7/1000000 Tokens（注册用户：免费100次调用/天，限时3天）  |
+| 文本生成 | DeepSeek-R1-Distill-Llama-70B    | ￥3.5/1000000 Tokens（注册用户：免费100次调用/天，限时3天）|
+| 文本生成 | DeepSeek-R1-Distill-Qwen-32B     | ￥1/1000000 Tokens（注册用户：免费100次调用/天，限时3天）  |
+| 文本生成 | DeepSeek-R1-Distill-Qwen-14B     | ￥0.6/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | DeepSeek-R1-Distill-Llama-8B     | ￥0.3/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | DeepSeek-R1-Distill-Qwen-7B      | ￥0.3/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | DeepSeek-R1-Distill-Qwen-1.5B    | 免费（注册用户：100次调用/天 / 实名用户：免费调用）    |
+| 文本生成 | Qwen2.5-instruct-14B             | ￥0.6/1000000 Tokens（注册用户：免费100次调用/天，限时3天） |
+| 文本生成 | Llama-3.1-70B                    | 免费（注册用户：100次调用/天 / 实名用户：免费调用）    |
+| 独立部署 | 客户指定大模型                    | 联系我们，服务器可选H100、L40S、L20、4090               |
 
 
 ### 3. 获取API Key
@@ -41,14 +43,14 @@ sidebar_position: 2
 
 #### 4.1 使用curl命令调用
 
-您可以直接在命令行中使用curl命令调用API，其中 YOUR_API_KEY 参数替换成自己的API-KEY, 以下是一个使用模型deepseek-r1-distill-qwen的示例： 
+您可以直接在命令行中使用curl命令调用API，其中 YOUR_API_KEY 参数替换成自己的API-KEY, 以下是一个使用模型DeepSeek-R1-Distill-Qwen-14B的示例： 
 
 ```sh
-export API_BASE_URL="https://apiemp.baystoneai.com/cognihub/service"
+export API_BASE_URL="https://api.baystoneai.cn"
 export API_KEY="{YOUR_API_KEY}"
 
 curl -X POST $API_BASE_URL/v1/chat/completions -H"Content-Type: application/json" -H "Authorization: Bearer $API_KEY" -d '{
-    "model": "deepseek-r1-distill-qwen",
+    "model": "DeepSeek-R1-Distill-Qwen-14B",
     "stream": true,
     "messages": [
         {"role": "system", "content": "You are ahelpful assistant."},
@@ -60,11 +62,11 @@ curl -X POST $API_BASE_URL/v1/chat/completions -H"Content-Type: application/json
 ```
 
 #### 4.2 使用Python调用
-您也可以使用Python语音来调用API,以下是一个使用模型deepseek-r1-distill-qwen的示例：
+您也可以使用Python语音来调用API,以下是一个使用模型DeepSeek-R1-Distill-Qwen-14B的示例：
 ```python
 from openai import OpenAI
 
-API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service"
+API_BASE_URL = "https://api.baystoneai.cn"
 API_KEY = "{YOUR_API_KEY}"
 
 client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
@@ -73,7 +75,7 @@ client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
 isStream = True
 
 response = client.chat.completions.create(
-    model="deepseek-r1-distill-qwen",
+    model="DeepSeek-R1-Distill-Qwen-14B",
     messages=[
         {"role": "user", "content": "你是谁"}
     ],
@@ -100,9 +102,9 @@ else:
 ```
 
 #### 4.3 使用NodeJs调用
-同样在NodeJs中也是可以使用的, 以下是一个使用模型deepseek-r1-distill-qwen的示例：
+同样在NodeJs中也是可以使用的, 以下是一个使用模型DeepSeek-R1-Distill-Qwen-14B的示例：
 ```javascript
-const API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service";
+const API_BASE_URL = "https://api.baystoneai.cn";
 const API_KEY = "{YOUR_API_KEY}";
 
 // 控制是否使用流式输出
@@ -119,7 +121,7 @@ async function callAPI() {
         'Authorization': `Bearer ${API_KEY}`,
       },
       body: JSON.stringify({
-        model: "deepseek-r1-distill-qwen",
+        model: "DeepSeek-R1-Distill-Qwen-14B",
         messages: [
           { role: "system", content: "You are a helpful assistant." },
           { role: "user", content: "Who won the world series in 2020?" },

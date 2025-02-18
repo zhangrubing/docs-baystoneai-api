@@ -9,9 +9,15 @@ DeepSeek-R1 是 deepseek-ai 推出的一系列高性能语言模型，专注于�
 
 #### 支持模型列表
 
-- `deepseek-v3`
-- `deepseek-r1`
-- `deepseek-r1-distill-qwen`
+- DeepSeek-R1-671B                
+- DeepSeek-V3-671B                
+- DeepSeek-R1-Distill-Llama-70B   
+- DeepSeek-R1-Distill-Qwen-32B    
+- DeepSeek-R1-Distill-Qwen-14B    
+- DeepSeek-R1-Distill-Llama-8B    
+- DeepSeek-R1-Distill-Qwen-7B     
+- DeepSeek-R1-Distill-Qwen-1.5B   
+- Qwen2.5-instruct-14B
 
 ### 2. 安装与升级
 
@@ -41,7 +47,7 @@ pip3 install -U openai
 ```python
 from openai import OpenAI
 
-API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service"
+API_BASE_URL = "https://api.baystoneai.cn"
 API_KEY = "{YOUR_API_KEY}"
 
 client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
@@ -50,7 +56,7 @@ client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
 isStream = True
 
 response = client.chat.completions.create(
-    model="deepseek-r1-distill-qwen",
+    model="DeepSeek-R1-Distill-Qwen-14B",
     messages=[
         {"role": "user", "content": "你是谁"}
     ],
@@ -81,7 +87,7 @@ else:
 ```python
 from openai import OpenAI
 
-API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service"
+API_BASE_URL = "https://api.baystoneai.cn"
 API_KEY = "{YOUR_API_KEY}"
 
 client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
@@ -90,7 +96,7 @@ client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
 isStream = false
 
 response = client.chat.completions.create(
-    model="deepseek-r1-distill-qwen",
+    model="DeepSeek-R1-Distill-Qwen-14B",
     messages=[
         {"role": "user", "content": "你是谁"}
     ],

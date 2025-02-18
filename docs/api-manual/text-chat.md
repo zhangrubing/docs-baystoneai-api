@@ -21,7 +21,7 @@ Authorization: Bearer YOUR_API_KEY
 #### 3.1 请求参数说明
 
 - 请求方法: POST
-- 请求路径: `https://apiemp.baystoneai.com/cognihub/service/v1/chat/completions`
+- 请求路径: `https://api.baystoneai.cn/v1/chat/completions`
 - 请求头: 
 ```
 Content-Type: application/json
@@ -148,12 +148,12 @@ usage 统计了本次 API 请求消耗的 Token 数量：
 请求
 
 ```json
-POST https://apiemp.baystoneai.com/cognihub/service/v1/chat/completions
+POST https://api.baystoneai.cn/v1/chat/completions
 Content-Type: application/json
 Authorization: Bearer YOUR_API_KEY
 
 {
-  "model": "deepseek-r1-distill-qwen",
+  "model": "DeepSeek-R1-Distill-Qwen-14B",
   "messages": [
     {"role": "system", "content": "You are a helpful assistant."},
     {"role": "user", "content": "Explain quantum mechanics in simple terms."}
@@ -169,7 +169,7 @@ Authorization: Bearer YOUR_API_KEY
   "id": "chatcmpl-123",
   "object": "chat.completion",
   "created": 1677858242,
-  "model": "deepseek-r1-distill-qwen",
+  "model": "DeepSeek-R1-Distill-Qwen-14B",
   "choices": [
     {
       "message": {"role": "assistant", "content": "Quantum mechanics is the study of..."},
@@ -189,12 +189,12 @@ Authorization: Bearer YOUR_API_KEY
 
 请求
 ```json
-POST https://apiemp.baystoneai.com/cognihub/service/v1/chat/completions
+POST https://api.baystoneai.cn/v1/chat/completions
 Content-Type: application/json
 Authorization: Bearer YOUR_API_KEY
 
 {
-  "model": "deepseek-r1-distill-qwen",
+  "model": "DeepSeek-R1-Distill-Qwen-14B",
   "messages": [
     {"role": "system", "content": "You are a helpful assistant."},
     {"role": "user", "content": "Explain quantum mechanics in simple terms."}
@@ -210,7 +210,7 @@ Authorization: Bearer YOUR_API_KEY
   "id": "chatcmpl-456",
   "object": "chat.completion.chunk",
   "created": 1677858243,
-  "model": "deepseek-r1-distill-qwen",
+  "model": "DeepSeek-R1-Distill-Qwen-14B",
   "choices": [
     {
       "delta": {"content": "Quantum "},

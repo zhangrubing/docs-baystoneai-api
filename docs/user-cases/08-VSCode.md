@@ -18,9 +18,9 @@ MARKETPLACE.VISUALSTUDIO.COM
 
 ### 3.获取模型服务的相关参数
 
-- 服务地址: https://apiemp.baystoneai.com/cognihub/service/v1
+- 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)  
-- 模型: deepseek-r1-distill-qwen
+- 模型: DeepSeek-R1-Distill-Qwen-14B
 
 ### 4.在VSCode 中 安装 CONTINUE
 
@@ -31,16 +31,16 @@ MARKETPLACE.VISUALSTUDIO.COM
 
 安装完成后，点击 CONTINUE 图标，然后点击设置图标，进行配置。
 ![alt text](img/vs-2.png)
-- 服务地址: https://apiemp.baystoneai.com/cognihub/service/v1
+- 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)
-- 模型: deepseek-r1-distill-qwen
+- 模型: DeepSeek-R1-Distill-Qwen-14B
 
 ```json
     {
       "title": "英智deepseek-r1",
       "provider": "openai",
-      "model": "deepseek-r1-distill-qwen",
-      "apiBase": "https://apiemp.baystoneai.com/cognihub/service/v1",
+      "model": "DeepSeek-R1-Distill-Qwen-14B",
+      "apiBase": "https://api.baystoneai.cn/v1",
       "apiKey": "*********8"
     },
 ```

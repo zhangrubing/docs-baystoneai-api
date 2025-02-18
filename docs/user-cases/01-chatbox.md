@@ -30,9 +30,9 @@ Chatbox 支持所有的主流操作系统，包括 Windows、MacOS 和 Linux，�
 
 #### 3.1 获取服务地址和API-KEY, 以及需要使用的模型
 
-- 服务地址: https://apiemp.baystoneai.com/cognihub/service/v1
+- 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)  
-- 模型: deepseek-r1-distill-qwen
+- 模型: DeepSeek-R1-Distill-Qwen-14B
 
 
 #### 3.2 在 Chatbox 中配置
@@ -50,9 +50,9 @@ Chatbox 支持所有的主流操作系统，包括 Windows、MacOS 和 Linux，�
 配置 Deepseek-R1 模型提供方的接入信息
 
 - 名称: 英智AI
-- 服务地址: https://apiemp.baystoneai.com/cognihub/service/v1
+- 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)
-- 模型: deepseek-r1-distill-qwen
+- 模型: DeepSeek-R1-Distill-Qwen-14B
 
 ![Chatbox](./img/set-3.png)
 

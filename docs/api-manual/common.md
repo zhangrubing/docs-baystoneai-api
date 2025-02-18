@@ -13,17 +13,17 @@ sidebar_position: 1
 
 ### 2. API BASE URL地址
 
-https://apiemp.baystoneai.com/cognihub/service/v1
+https://api.baystoneai.cn
 
 所有 API 端点都基于此 URL 进行调用，例如：
 
 | 端点 | 说明 | 完整 URL |
 |------|------|---------|
-| `chat/completions` | 生成对话 | `https://api.openai.com/v1/chat/completions` |
-| `completions` | 传统文本补全 | `https://api.openai.com/v1/completions` |
-| `edits` | 文本编辑 | `https://api.openai.com/v1/edits` |
-| `images/generations` | 生成图片 | `https://api.openai.com/v1/images/generations` |
-| `models` | 获取可用模型列表 | `https://api.openai.com/v1/models` |
+| `chat/completions` | 生成对话 | `https://api.baystoneai.cn/v1/chat/completions` |
+| `completions` | 传统文本补全 | `https://api.baystoneai.cn/v1/completions` |
+| `edits` | 文本编辑 | `https://api.baystoneai.cn/v1/edits` |
+| `images/generations` | 生成图片 | `https://api.baystoneai.cn/v1/images/generations` |
+| `models` | 获取可用模型列表 | `https://api.baystoneai.cn/v1/models` |
 
 ---
 
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR_API_KEY
 ```python
 import openai
 
-API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service"
+API_BASE_URL = "https://api.baystoneai.cn"
 API_KEY = "{YOUR_API_KEY}"
 
 client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)
@@ -89,7 +89,7 @@ for chunk in response:
 ```python
 import openai
 
-API_BASE_URL = "https://apiemp.baystoneai.com/cognihub/service"
+API_BASE_URL = "https://api.baystoneai.cn"
 API_KEY = "{YOUR_API_KEY}"
 
 client = OpenAI(base_url=f"{API_BASE_URL}/v1", api_key=API_KEY)

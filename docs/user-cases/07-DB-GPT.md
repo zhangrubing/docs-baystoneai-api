@@ -9,9 +9,9 @@ DB-GPT 是一个开源的 AI 原生数据应用开发框架，旨在通过集成
 
 ### 2. 获取配置需要的参数
 
-- 服务地址: https://apiemp.baystoneai.com/cognihub/service/v1
+- 服务地址: https://api.baystoneai.cn/v1
 - API-KEY: (登录后在管理台获取)  
-- 模型: deepseek-r1-distill-qwen
+- 模型: DeepSeek-R1-Distill-Qwen-14B
 
 ### 3. 部署 DB-GPT
 
@@ -50,7 +50,7 @@ cp .env.template .env
 ```bash
 # 配置具体使用的模型名称
 BAYSTONEAI_MODEL_VERSION=deepseek-r1-distill-qwen
-BAYSTONEAI_API_BASE=https://apiemp.baystoneai.com/cognihub/service/v1
+BAYSTONEAI_API_BASE=https://api.baystoneai.cn/v1
 # 记得填写您在步骤2中获取的 API Key
 BAYSTONEAI_API_KEY={API-KEY}
 ```
