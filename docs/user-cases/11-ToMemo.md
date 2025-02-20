@@ -28,7 +28,7 @@ ToMemo 是一款专为苹果设备打造的效率类应用，能让你轻松管�
 
 在手机上打开ToMemo，下方主菜单中打开"设置"->选择"扩展"->选择"AI服务"->选择"AI供应商" 点击右上角的"添加"按钮
 
-![alt text](img/tome-0.png)
+![alt text](img/tome-0.png )
 
 输入以下信息:
 
@@ -39,34 +39,35 @@ ToMemo 是一款专为苹果设备打造的效率类应用，能让你轻松管�
 - 名称: 英智未来
 
 
-![alt text](img/tome-1.png)
+![alt text](img/tome-1.png )
 
 添加模型 :deepseek-r1-distill-qwen-32b
 
-![alt text](img/tome-2.png)
+![alt text](img/tome-2.png )
 
 2) 添加AI助手到主菜单
 
 在手机上打开ToMemo，下方主菜单中打开"设置"->选择"扩展"->选择"AI服务" 开启底部Tab页
 
-![alt text](img/tome-4.png)
+![alt text](img/tome-4.png )
 
 ### 5.使用DeepSeek-R1模型
 
 配置完成后，你可以在ToMemo中选择DeepSeek-R1模型，开始使用了。
 
-在底部的"AI助手" --> 点击 "单词助理"
+点击底部的"AI助手" --> 点击 "单词助理"
 
-![alt text](img/tome-5.png)
+![alt text](img/tome-5.png )
 
 
 在"单词助理"中，你可以输入你想要查询的单词，AI助手会自动生成单词的释义和例句。比如 输入 "hello"，AI助手会自动生成单词的释义和例句。
 
-![alt text](img/tome-6.png)
+![alt text](img/tome-6.png )
 
 
 同样也可以在"彩虹屁专家"中这么使用
-![alt text](img/tome-7.png)
+
+![alt text](img/tome-7.png )
 
 
 
