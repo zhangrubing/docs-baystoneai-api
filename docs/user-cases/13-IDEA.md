@@ -1,99 +1,78 @@
 ---
-sidebar_position: 3
+sidebar_position: 13
 ---
 
-# 在Cherry Studio中使用
+# 在IEDA中使用
 
 
 
-### 1. 安装 Cherry Studio
+DeepSeek 大模型能力顶级，特别是 DeepSeek-R1 专为复杂推理任务设计，强化了数学、代码生成和逻辑推理领域性能，适用于科研、算法交易、代码生成等复杂任务。
 
-Cherry Studio 是一款支持多模型服务的桌面客户端，内置了各种分类的千余助手，旨在帮助用户在多种场景下提升工作效率。支持Win、macOS、Linux平台，无需复杂设置即可使用。
-Cherry Studio 内置众多服务商，同时也支持其他兼容OpenAI/Anthropic等API格式的服务商，以及支持本地模型运行。
-Cherry Studio 提供了诸如完整的 Markdown 渲染、智能体创建、翻译功能、文件上传和多模态对话等个性化功能，并具有友好的界面设计和灵活的主题选项，旨在为用户提供全面而高效的 AI 交互体验。
+今天，结合常用的编程工具 IDEA，介绍如何集成 DeepSeek 大模型的能力，搭建一个AI代码助手。
 
 
 
-#### 1.1 下载 Cherry Studio
+#### 第一步：适配 IDEA 版本
 
-- [官网下载](https://cherry-ai.com/)
-- [开源下载](https://github.com/CherryHQ/cherry-studio/releases/latest)
+这里会使用插件 Proxy AI（CodeGPT），它是一个AI驱动的代码助手，能够辅助开发者的编程工作，已兼容了对包括IDEA (Ultimate, Community)在内的19种开发工具的支持。
 
+插件信息详见：[https://plugins.jetbrains.com/plugin/21056-proxy-ai](https://plugins.jetbrains.com/plugin/21056-proxy-ai)
 
+支持的 IDEA 版本系列如下：
 
-#### 1.2 安装教程
+![1](https://github.com/user-attachments/assets/76f57b52-36a2-439f-8336-d28e592318ec)
 
-- [Windows 安装](https://docs.cherry-ai.com/pre-basic/installation/windows)
-- [macOS 安装](https://docs.cherry-ai.com/pre-basic/installation/macos)
-
-
-
-### 2. 配置【英智未来】的模型服务
-
-#### 2.1 新建【英智未来】模型服务的API密钥
-
-> 如果在【英智大模型推理API】平台已经创建过API密钥，可跳过此步。
-
-1. 在【英智大模型推理API】平台，进入【我的控制台】
-
-   ![image-20250211153338634](https://github.com/user-attachments/assets/f54fb464-746a-4257-997c-55acae4614db)
-
-
-3. 新建API密钥
-
-   ![image-20250211153908276](https://github.com/user-attachments/assets/8410b2e7-e7b4-4651-8d78-122a370d9553)
-
-
-5. API密钥的操作
-
-   ![image-20250211154241772](https://github.com/user-attachments/assets/3b605418-325d-4596-ad23-9afb91a046de)
+**确保 IDEA 版本为 2022.3+**，本文所用的 IDEA 版本为2024.1。
 
 
 
+#### 第二步：安装 Proxy AI 插件
 
-> 以下操作在Cherry Studio中执行。
+![2 1](https://github.com/user-attachments/assets/1ae420a6-a64d-4f4a-a34e-8b323a14e539)
 
-#### 2.2 添加【英智未来】模型服务
+![2 2](https://github.com/user-attachments/assets/60af77a4-aa7b-4f41-81b7-835c1327c816)
 
-![image-20250211160611980](https://github.com/user-attachments/assets/a56a5271-33f1-4be0-96c0-a00d06535e10)
-
-
-#### 2.3 设置【英智未来】模型服务访问信息
-
-![alt text](img/cherr-set.png)
-
-```python
-# 填写说明
-  API密钥：2.1中创建的密钥
-  API地址：https://api.baystoneai.cn
-```
-
-#### 2.4 添加模型
-
-![image-20250211162531634](https://github.com/user-attachments/assets/983eebbc-a270-4f1c-8d16-b2313c68ae97)
-
-
-![alt text](img/cherry-add-model.png)
-
-```python
-# 填写说明
-  模型ID：从2.1的【英智大模型推理API】平台支持的大模型列表中选择，复制列表【模型】列的模型名称
-```
+![2 3](https://github.com/user-attachments/assets/044cd4ca-7fe3-427f-bc17-490f4e788a87)
 
 
 
-### 3. 模型服务使用
+#### 第三步：配置 DeepSeek 模型
 
-使用语言模型服务聊天
+1. 申请 DeepSeek 免费 API Key
 
-1. 点击左侧菜单栏的【助手】按钮
+   英智未来旗下大模型API服务平台，已支持包括 deepseek-671b 在内的多个尺寸的 DeepSeek 大模型，申请地址：
 
-   ![image-20250211171227969](https://github.com/user-attachments/assets/5e26df0e-9532-4aa6-b91d-916dde347818)
+   [https://api.baystoneai.com/](https://api.baystoneai.com/)
 
-2. 点击顶部菜单中的模型名称，选择【英智未来】的模型服务
+   API Key申请方法，请查阅英智公众号文章 [无需调试，2分钟快速接入 DeepSeek R1](https://mp.weixin.qq.com/s/QvUop_5VwRcf_vtUVDJ7tw)
 
-   ![image-20250211171509824](https://github.com/user-attachments/assets/d12a1808-741c-41cd-a219-da7682cfd03e)
+2. 配置 DeepSeek 模型
 
-3. 在输入框内输入文字即可开始聊天
+   ![3 2 1](https://github.com/user-attachments/assets/92bae2cf-3d30-4562-8d8d-70b07a22996a)
 
-   ![image-20250211172047065](https://github.com/user-attachments/assets/e2b5744c-5ce3-46e5-a229-3c7a50a201b3)
+   ![3 2 2](https://github.com/user-attachments/assets/dcedcf99-d79e-4144-83ad-2b8236641aa9)
+
+   ![3 2 3](https://github.com/user-attachments/assets/92e8149b-7841-4dd6-a1e2-1730c9fdbbc2)
+
+3. 启用 DeepSeek 模型
+
+   ![3 3 1](https://github.com/user-attachments/assets/491e9ee3-6097-4525-8267-cd26d2b2e230)
+
+   ![3 3 2](https://github.com/user-attachments/assets/0876d964-8306-4967-a889-a3ea1d072beb)
+
+
+
+#### 第四步：开始使用 DeepSeek 模型
+
+以下使用 DeepSeek 模型演示代码生成能力：
+
+![4 1](https://github.com/user-attachments/assets/26529d21-40a3-4c3c-bc14-7e474f490f7c)
+
+![4 2](https://github.com/user-attachments/assets/428d0049-f91b-4e25-8d26-4b3e65a9ea48)
+
+![4 3](https://github.com/user-attachments/assets/f038c27f-1268-4298-a313-23dc504061da)
+
+更多的应用场景，包括：问题解答、代码补全、代码解释等能力，大家可以自行探索。
+
+
+
