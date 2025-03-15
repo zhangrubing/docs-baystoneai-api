@@ -36,7 +36,7 @@ Cherry Studio 提供了诸如完整的 Markdown 渲染、智能体创建、翻�
 
 1. 在【英智大模型推理API】平台，进入【我的控制台】
 
-   ![image-20250211153338634](https://github.com/user-attachments/assets/f54fb464-746a-4257-997c-55acae4614db)
+   ![2 1 1](https://github.com/user-attachments/assets/54c04aaa-60bd-4f5e-b95e-37b293117777)
 
 
 3. 新建API密钥
@@ -55,12 +55,12 @@ Cherry Studio 提供了诸如完整的 Markdown 渲染、智能体创建、翻�
 
 #### 2.2 添加【英智未来】模型服务
 
-![image-20250211160611980](https://github.com/user-attachments/assets/a56a5271-33f1-4be0-96c0-a00d06535e10)
+![2 2](https://github.com/user-attachments/assets/d6e16c74-51db-42cf-a4f6-e86292ba4514)
 
 
 #### 2.3 设置【英智未来】模型服务访问信息
 
-![alt text](img/cherr-set.png)
+![2 3](https://github.com/user-attachments/assets/0879f18a-5849-4549-b813-862fbd0022f5)
 
 ```python
 # 填写说明
@@ -70,10 +70,10 @@ Cherry Studio 提供了诸如完整的 Markdown 渲染、智能体创建、翻�
 
 #### 2.4 添加模型
 
-![image-20250211162531634](https://github.com/user-attachments/assets/983eebbc-a270-4f1c-8d16-b2313c68ae97)
+![2 4 1](https://github.com/user-attachments/assets/aed8f6df-c331-44e0-89e1-7e6d4e466d3d)
 
 
-![alt text](img/cherry-add-model.png)
+![2 4 2](https://github.com/user-attachments/assets/ab9c33a5-eada-4010-a519-5a2665268a64)
 
 ```python
 # 填写说明
@@ -88,13 +88,15 @@ Cherry Studio 提供了诸如完整的 Markdown 渲染、智能体创建、翻�
 
 1. 点击左侧菜单栏的【助手】按钮
 
-   ![image-20250211171227969](https://github.com/user-attachments/assets/5e26df0e-9532-4aa6-b91d-916dde347818)
+   ![3 1 1](https://github.com/user-attachments/assets/92327fd1-892c-4120-a2a9-ce0c17ebf6a4)
 
 2. 点击顶部菜单中的模型名称，选择【英智未来】的模型服务
 
-   ![image-20250211171509824](https://github.com/user-attachments/assets/d12a1808-741c-41cd-a219-da7682cfd03e)
+   ![3 1 2](https://github.com/user-attachments/assets/d7af9de9-0b2d-49f9-9770-7a24f5714ce0)
 
 3. 在输入框内输入文字即可开始聊天
 
-   ![image-20250211172047065](https://github.com/user-attachments/assets/e2b5744c-5ce3-46e5-a229-3c7a50a201b3)
+   ![3 1 3](https://github.com/user-attachments/assets/293e8670-01fd-4742-b79e-23f0c8333ab2)
+
+
 
