@@ -6,35 +6,35 @@ sidebar_position: 16
 
 
 
-**横空出世的 DeepSeek，在自然语言处理方面表现出了卓越的能力，今天就来给大家详细介绍如何将 DeepSeek 接入 Word，让它成为文案创作的得力助手。**
+今天，接着给大家详细介绍如何将 DeepSeek 接入 WPS，打造你的AI创作助手。
 
 
 
 #### 第一步：启用开发工具
 
-打开Word文档，依次点击：【文件】>【更多...】>【选项】>【自定义功能区】，勾选【开发工具】。
+打开WPS文档，依次点击：【文件】>【选项】>【自定义功能区】，勾选【工具】。
 
-![1](https://github.com/user-attachments/assets/1b7ee561-d229-4af6-a125-832de276d66f)
-
-
+![1](https://github.com/user-attachments/assets/58e4d8fb-9575-4377-8d02-0a4dfd9a67e1)
 
 #### 第二步：启用宏命令
 
-按如下操作启用宏命令：【文件】>【更多...】>【选项】>【信任中心】>【信任中心设置】>【宏设置】，点选【启用所有宏】。
+按如下操作启用宏命令：【文件】>【选项】>【信任中心】>【宏安全性】，点选【低】。
 
-![2](https://github.com/user-attachments/assets/4576cad2-bcce-457e-9323-d4c467dc9d4d)
-
-
+![2](https://github.com/user-attachments/assets/b1d7eb16-084d-41ed-be24-65e620e6dbec)
 
 #### 第三步：创建VB宏命令
 
-1. 点击菜单【开发工具】下的VB编辑器【Visual Basic】。
+1. 点击菜单【工具】＞【开发工具】下的【VB编辑器】。
 
-   ![3 1](https://github.com/user-attachments/assets/5640f340-dfbe-4cb7-8484-1a271f5e6427)
+   ![3 1 1](https://github.com/user-attachments/assets/52b4d6ac-7b70-4809-8d40-d2858abbfbf1)
+
+   ![3 1 2](https://github.com/user-attachments/assets/62c47c08-1cf6-4318-a489-de164ffefbcb)
+
+   ![3 1 3](https://github.com/user-attachments/assets/baa863b6-3e59-4891-ae29-6cbfb9c0f666)
 
 2. 进入后选择菜单【插入】>【模块】，命名为“DeepSeek”。
 
-   ![3 2](https://github.com/user-attachments/assets/252c0c04-e3af-4780-903f-236f8dff3497)
+   ![3 2](https://github.com/user-attachments/assets/f4134cd7-6224-44c4-b983-32f76cf67d7e)
 
 3. 复制下面的代码到DeepSeek模块中。
 
@@ -93,8 +93,8 @@ sidebar_position: 16
     
      Set objHttp = Nothing
    End Function
-    
-    
+   
+   
    Sub DeepSeekR1()
      Dim strInputText As String
      Dim strResponse As String
@@ -191,60 +191,57 @@ sidebar_position: 16
      strSendTxt = "{""model"": ""deepseek-r1-distill-qwen-32b"", " & vbCrLf & _
    ```
 
-4. 其中的 API Key， 申请地址：[https://api.baystoneai.com/](https://api.baystoneai.com/)，申请攻略可以查阅公众号文章“[无需调试，2分钟快速接入 DeepSeek R1](https://mp.weixin.qq.com/s/QvUop_5VwRcf_vtUVDJ7tw)”。申请完成后，替换这里的YOUR_API_KEY。
+4. 其中的 API Key， 申请地址：[https://api.baystoneai.com](https://api.baystoneai.com/)，申请攻略可以查阅公众号文章“[无需调试，2分钟快速接入 DeepSeek R1](https://mp.weixin.qq.com/s/QvUop_5VwRcf_vtUVDJ7tw)”。申请完成后，替换这里的YOUR_API_KEY。
 
-   ![3 4](https://github.com/user-attachments/assets/3ee42884-bb16-4721-ba1b-6f202f1f7eb6)
+   ![3 4](https://github.com/user-attachments/assets/203dc73a-2245-471c-a73a-ea3c0e2967ca)
 
-5. 保存VB脚本并关闭窗口；再依次点击：【文件】>【更多...】>【选项】>【自定义功能区】，选择这里的“宏”，即可看到刚才创建的宏命令。
+5. 保存VB脚本并关闭窗口；再依次点击：【文件】>【选项】>【自定义功能区】，选择这里的“宏”，即可看到刚才创建的宏命令。
 
-   ![3 5 1](https://github.com/user-attachments/assets/a63255a7-357f-4d9f-8835-70656719e3d2)
+   ![3 5 1](https://github.com/user-attachments/assets/0f4a0b60-cde9-4ce8-8f37-0706421d6bfe)
 
-   > 模版文件的"另存为"路径为：
-   >
-   > C:\Users\你的电脑用户名\AppData\Roaming\Microsoft\Word\STARTUP
+   > 模版文件的"另存为"路径为：C:\Users\你的电脑用户名\AppData\Roaming\kingsoft\wps\startup
 
-   ![3 5 2](https://github.com/user-attachments/assets/340533a3-d031-4d73-b623-292b9f08ed5f)
-
-
+   ![3 5 2](https://github.com/user-attachments/assets/623b92ed-0135-482a-9878-735f54f19e2c)
 
 #### 第四步：新建宏命令组
 
-1. 在右侧继续右键【开发工具】，在它下面【添加新组】，并可重命名这个组。
+1. 再依次点击：【工具】>【新建组】，添加新组，并可重命名这个组。
 
-   ![4 1 1](https://github.com/user-attachments/assets/885398db-4ddb-426f-8b63-12a8e76e842c)
+   ![4 1 1](https://github.com/user-attachments/assets/fe5283b9-d119-4345-830c-1266f859bb95)
 
-   ![4 1 2](https://github.com/user-attachments/assets/726fe4a0-ff18-452f-a44a-cb3bcb50cc7e)
+   ![4 1 2](https://github.com/user-attachments/assets/e6dd31a1-55f2-4c62-9a05-d769b8559473)
 
    添加的新组如下：
 
-   ![4 1 3](https://github.com/user-attachments/assets/4f57013c-3b90-4cf5-a503-acee910d64b1)
+   ![4 1 3](https://github.com/user-attachments/assets/99fc8357-8dce-4699-bd96-0dabafb92814)
 
 2. 将第三步创建的宏命令添加到这个组下面。
 
-   ![4 2 1](https://github.com/user-attachments/assets/7ed7c252-99ad-4a12-b9c6-fc7d55bf2923)
+   ![4 2 1](https://github.com/user-attachments/assets/9c9ca1cf-0ce2-4498-87de-b4f5b8adab6f)
 
-   在菜单【开发工具】中就可以看到这个按钮：
+   在菜单【工具】中就可以看到这个新增的功能按钮：
 
-   ![4 2 2](https://github.com/user-attachments/assets/d0e6cfbb-b990-4b01-abbf-6ab6ef4fd564)
+   ![4 2 2](https://github.com/user-attachments/assets/11ad0b75-36a6-4b1a-ac39-8723bb6783d7)
 
 
 
 #### 第五步：开始创作吧
 
-在Word文档中测试一下这个功能，输入一段文字，点击新建的功能按钮。
+在WPS文档中输入一段文字，选定文字，再点击新建的功能按钮。
 
 ```
 # 输入文字
-  请写一篇300字的有关AIGC发展前景的科技文章。
+  帮我写一篇200字的科幻小说，有关外星人入侵地球。
 ```
 
-![5](https://github.com/user-attachments/assets/55a7c3fa-3efa-4a27-a4f4-bf4bf993b1da)
+![5 1](https://github.com/user-attachments/assets/60bae644-f620-438c-885a-8042f5a2f40b)
+
+![5 2](https://github.com/user-attachments/assets/84257014-45ad-4207-a7b5-0d1193aa8e14)
 
 ```
 # 输出说明
-  <think>...</think>为 deepseek-r1 模型输出的思维链内容。也可以通过改写VB宏命令脚本控制不输出，有兴趣的朋友可以尝试优化。
+  <think>...</think>之间为 deepseek-r1 模型输出的思维链内容。也可以通过改写VB宏命令脚本控制不输出，有兴趣的同学可以尝试优化。
 ```
 
-之后，内容扩写、检查错别字、翻译、智能问答等等需求都可以直接在Word里完成。是不是很方便？
 
 
