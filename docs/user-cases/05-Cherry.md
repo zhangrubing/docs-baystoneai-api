@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# 在Cherry Studio 中使用
+# 在Cherry Studio中使用
 
 
 
