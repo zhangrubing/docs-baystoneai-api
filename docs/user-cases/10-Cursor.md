@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 12
 ---
 
 # 在Cursor中使用 
