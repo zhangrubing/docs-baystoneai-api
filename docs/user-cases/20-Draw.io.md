@@ -56,11 +56,12 @@ sidebar_position: 20
 
 2、一键生成图表。
 
-![image-20250305163648717](C:\Users\JetLee\Desktop\DeepSeek\宣传文案\18. DeepSeek+Draw.io\2.2.png)
+![2 2](https://github.com/user-attachments/assets/151e4b7a-7fdc-42a0-8b3c-01dbdabde842)
+
 
 3、操作图表。
 
-![image-20250305163954345](C:\Users\JetLee\Desktop\DeepSeek\宣传文案\18. DeepSeek+Draw.io\2.3.png)
+![2 3](https://github.com/user-attachments/assets/5fd04538-be3f-4893-a0a5-e344bbfb4589)
 
 
 
